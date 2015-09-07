@@ -35,3 +35,16 @@ body {
 #hungry-heart {
   font-size: 20px;
 }
+
+.pagination .pagination-lg {
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.pagination > li > a {
+  color: black;
+}
+
+.pagination > .active > a, .pagination > .active > a:hover {
+  background-color: black;
+  border-color: black;
+}

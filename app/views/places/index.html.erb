@@ -4,5 +4,9 @@
     <i><%= place.address %></i><br /><br />
     <p><%= place.description %></p><br />
   </div>
-
 <% end %>
+
+
+<div class="col-12-sm text-center">
+  <%= paginate @places %>
+</div>
