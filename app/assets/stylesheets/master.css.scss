@@ -32,8 +32,8 @@ body {
   font-size: 26px;
 }
 
-#hungry-heart {
-  font-size: 20px;
+.hungry-heart {
+  color: red;
 }
 
 .pagination .pagination-lg {
@@ -47,4 +47,8 @@ body {
 .pagination > .active > a, .pagination > .active > a:hover {
   background-color: black;
   border-color: black;
+}
+
+.glyphicon-plus-sign {
+  color: white;
 }
