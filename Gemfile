@@ -44,6 +44,9 @@ gem "kaminari"
 # Use Simple Form
 gem 'simple_form'
 
+# Use Devise for authentication
+gem 'devise', '>= 3.2.4'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
