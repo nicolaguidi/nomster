@@ -58,3 +58,4 @@ gem 'devise', '>= 3.2.4'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+gem 'pry'
