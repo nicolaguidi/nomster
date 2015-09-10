@@ -18,6 +18,10 @@ before_action :authenticate_user!, :only => [:new, :create]
     @place = Place.find(params[:id])
   end
 
+  def edit
+    @place = Place.find(params[:id])
+  end
+
   private
 
     def place_params
