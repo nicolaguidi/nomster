@@ -47,6 +47,12 @@ gem 'simple_form'
 # Use Devise for authentication
 gem 'devise', '>= 3.2.4'
 
+# Use geocoder gem to convert addresses
+gem 'geocoder'
+
+# Use Figaro to manage enviroment variables
+gem "figaro", ">= 1.0.0"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
