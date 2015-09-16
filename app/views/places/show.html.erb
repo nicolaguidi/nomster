@@ -30,6 +30,10 @@
 
   <br />
 
+  <% @place.photos.each do |photo| %>
+    <%= photo.caption %>
+  <% end %>
+
   <div class="pull-right">
     <% if current_user && current_user == @place.user %>
       <%= link_to 'Edit', edit_place_path(@place), :class => 'btn btn-primary' %>
@@ -38,12 +42,12 @@
                                                  :class => 'btn btn-danger' %>
     <% end %>
   </div>
-</div>
+</div> <!-- End of Booyah box -->
 
 <div class="clear"></div>
 
 <!-- Photos upload module -->
-<%= simple_form_for @photo do |f| %>
+<%= simple_form_for @photo, :url => place_photos_path(@place) do |f| %>
   <%= f.input :caption %>
   <%= f.button :submit %>
 <% end %>
