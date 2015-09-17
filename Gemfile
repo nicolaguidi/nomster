@@ -55,6 +55,7 @@ gem "figaro", ">= 1.0.0"
 
 # Use Carrierwave gem to upload pictures
 gem 'carrierwave'
+gem 'fog'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

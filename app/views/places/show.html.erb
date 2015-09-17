@@ -49,8 +49,8 @@
 
 <!-- Photos upload module -->
 <%= simple_form_for @photo, :url => place_photos_path(@place) do |f| %>
+  <%= f.input :picture %>
   <%= f.input :caption %>
-  <%= f.input :picture %>.
   <%= f.button :submit %>
 <% end %>
 
