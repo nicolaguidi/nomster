@@ -6,7 +6,7 @@ class Comment < ActiveRecord::Base
     'one star'    => '1_star',
     'two stars'    => '2_stars',
     'three stars'  => '3_stars',
-    'four stasr'   => '4_stars',
+    'four stars'   => '4_stars',
     'five stars'   => '5_stars',
   }
 
