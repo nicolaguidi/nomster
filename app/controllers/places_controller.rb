@@ -5,6 +5,10 @@ before_action :authenticate_user!, :only => [:new, :create, :edit, :update, :des
     @places = Place.all.page(params[:page]).per(10)
   end
 
+  def map
+    @places = Place.all
+  end
+
   def new
     @place = Place.new
   end

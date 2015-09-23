@@ -1,0 +1,35 @@
+<div id="map"></div>
+
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+  <script type="text/javascript">
+  // http://stackoverflow.com/questions/3059044/google-maps-js-api-v3-simple-multiple-marker-example
+  // http://stackoverflow.com/questions/16825290/google-maps-api-v3-adding-multiple-markers-w-info-windows-w-custom-text
+    var locations = [
+      <% @places.each do |place| %>
+        <% if place == @places.last %>
+        ['<%= link_to place.name, place_path(place) %><br/><%= place.description %>', <%= place.latitude %>, <%= place.longitude %>, 4]
+        <% else %>
+        ['<%= link_to place.name, place_path(place) %><br/><%= place.description %>', <%= place.latitude %>, <%= place.longitude %>, 4],
+        <% end %>
+      <% end %>
+    ];
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 2,
+      center: new google.maps.LatLng(51.517026, -0.109195),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+    var infowindow = new google.maps.InfoWindow();
+    var marker, i;
+    for (i = 0; i < locations.length; i++) {
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+  </script>
