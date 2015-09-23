@@ -55,7 +55,9 @@
 
     <% place.photos.each do |photo| %>
       <div class="col-xs-12 col-sm-6">
-        <%= image_tag photo.picture, :class => 'img-thumbnail' %>
+        <%= link_to photo.picture.to_s, :class => 'fancybox' do %>
+          <%= image_tag photo.picture, :class => 'img-thumbnail' %>
+        <% end %>
       </div>
     <% end %>
 

@@ -57,6 +57,9 @@ gem "figaro", ">= 1.0.0"
 gem 'carrierwave'
 gem 'fog'
 
+# Use Fancybox 2 for thumb preview
+gem 'fancybox2-rails', '~> 0.2.8'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
