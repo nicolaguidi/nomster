@@ -60,6 +60,9 @@ gem 'fog'
 # Use Fancybox 2 for thumb preview
 gem 'fancybox2-rails', '~> 0.2.8'
 
+# Use FactoryGirls for testing
+gem "factory_girl_rails", "~> 4.0"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
